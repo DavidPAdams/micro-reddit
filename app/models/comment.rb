@@ -3,6 +3,6 @@ class Comment < ApplicationRecord
   validates :body, presence: true, length: { in: 1..300 }
   validates :user_id, numericality: true
   validates :article_id, numericality: true
-  belongs_to :user, dependent: :destroy
-  belongs_to :article, dependent: :destroy
+  belongs_to :user
+  belongs_to :article
 end
